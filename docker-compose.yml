@@ -17,6 +17,8 @@ services:
       timeout: 5s
       retries: 5
     networks: [red-ia]
+    ports:
+      - "127.0.0.1:5432:5432"
 
   api:
     build: .
@@ -40,3 +42,4 @@ volumes:
 networks:
   red-ia:
     driver: bridge
+
